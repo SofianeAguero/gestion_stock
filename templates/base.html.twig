@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Gestion Stock / Contrats !{% endblock %}</title>
+        <style type="text/css">
+            .dataTables_info{
+                display: none!important;
+            }
+            .fa-edit{
+                color: orangered;
+            }
+            .fa-trash{
+                color: orangered;
+            }
+        </style>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+           <!--  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script> -->
+            <script type="text/javascript" charset="utf8" src="{{ asset('assets/jquery.dataTables.min.js') }}"></script>
+            <script type="text/javascript" charset="utf8" src="{{ asset('assets/dataTables.bootstrap.min.js') }}"></script>
+        {% endblock %}
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $('#example').DataTable();
+            } );
+        </script>
+    </body>
+</html>

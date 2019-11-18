@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <style>
+        input{
+            margin-top: 3px!important;
+            margin-bottom: 12px!important;
+        }
+    </style>
+    <div class="containers" style="padding: 0; margin: 0;">
+        <div class="bg-primary" style="text-align: center; background: #333333; margin-bottom: 35px; padding: 7px 0 10px 0;">
+            <h3 style="color: #ffffff;">Ajout d'éléments</h3>
+        </div>
+
+        <div style="width: 800px; margin: 0 auto;">
+            <div class="col-md-12">
+                <form action="" method="post">
+                    <div class="col-md-8 col-md-offset-2">
+                        <label for="name" class="label label-primary">Nom</label>
+                        <input type="text" required id="name" autocomplete="off" name="name" class="form-control">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <label for="brand" class="label label-primary">Marque</label>
+                        <input type="text" required id="brand" autocomplete="off" name="brand" class="form-control">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <label for="reference" class="label label-primary">Reference</label>
+                        <input type="text" required id="reference" autocomplete="off" name="reference" class="form-control">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <label for="stock" class="label label-primary">Stock</label>
+                        <input type="text" required id="stock" autocomplete="off" name="stock" class="form-control">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <label for="date" class="label label-primary">Date de fin</label>
+                        <input type="date" required id="date" autocomplete="off" name="date" class="form-control">
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                        <a href="{{ path('homepage') }}" class="btn btn-link">Voir la liste</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
